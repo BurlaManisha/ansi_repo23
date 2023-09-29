@@ -2,14 +2,9 @@
 - hosts: all
   become: yes
   tasks:
-      - name: install java for Debian
-        apt:
-          name: openjdk-8-jre
-          state: present
-        when: ansible_os_family=="Debian"
+          - name: instal apache2
+            apt:
+                name: apache2
+                state: present
+~
 
-      - name: install java for redat
-        yum:
-          name: java-1.8.0-openjdk
-          state: present
-        when: ansible_os_family=="RedHat"
