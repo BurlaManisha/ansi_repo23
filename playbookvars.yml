@@ -11,11 +11,11 @@
             msg: "{{myvar2}}"
         
         - name: install java for Debian
-        apt:
-          name: "{{item}}"
-          state: present
-        when: ansible_os_family=="Debian"
-        loop:
-        - "{{myvar1}}"
-        - "{{myvar2}}"
-        - "{{myvar3}}"
+          apt:
+            name: "{{item}}"
+            state: present
+          when: ansible_os_family=="Debian"
+          loop:
+          - "{{myvar1}}"
+          - "{{myvar2}}"
+          - "{{myvar3}}"
