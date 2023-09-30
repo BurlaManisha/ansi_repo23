@@ -5,11 +5,11 @@
       - name: install java for Debian
         apt:
           name: "{{openjdkforubuntu}}"
-          state: present
+          state: absent
         when: ansible_os_family=="Debian"
 
       - name: install java for redat
         yum:
           name: "{{openjdkforredhat}}"
-          state: present
+          state: absent
         when: ansible_os_family=="RedHat"

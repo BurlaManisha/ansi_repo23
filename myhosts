@@ -7,5 +7,5 @@
 172.31.23.75
 
 [mywebserver:vars]
-openjdkforubuntu = openjdk-8-jrerrrrr
-openjdkforredhat = java-1.8.0-openjdk
+openjdkforubuntu= openjdk-8-jrerrrrr
+openjdkforredhat= java-1.8.0-openjdk
