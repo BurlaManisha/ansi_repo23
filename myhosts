@@ -5,3 +5,7 @@
 [mydbserver]
 172.31.38.104
 172.31.21.171
+
+[mywebserver:var]
+openjdkforubuntu= openjdk-8-jre
+openjdkforredhat= java-1.8.0-openjdk
