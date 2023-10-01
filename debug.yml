@@ -1,0 +1,23 @@
+---
+- hosts: mywebserver
+  become: yes
+  tasks:
+    - name: i want to store linux cmd in ansible
+      command: hostname -f
+      register: myRes
+      
+    - name: display result 
+      debug: 
+        msg: "{{myRes}}"
+
+    - name: instal git
+      apt:
+        name: git
+        state: present
+      when: myres.stderr == ""
+
+    - name: instal wget
+      apt:
+        name: wget
+        state: present
+      when: myres.stderr != ""
