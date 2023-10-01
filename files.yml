@@ -2,8 +2,8 @@
 - hosts: 172.31.38.101
   become: yes
   tasks:
-    - name: instal apache2
-      files:
+    - name: create file
+      file:
         path: /home/malu/mytestfile
         state: touch
 
