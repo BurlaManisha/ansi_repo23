@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: instal apache2
+      files:
+        path: /home/malu/mytestfile
+        state: touch
+
