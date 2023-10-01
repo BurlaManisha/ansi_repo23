@@ -4,7 +4,7 @@
   tasks:
     - name: i want to store linux cmd in ansible
       command: hostname -f
-      redister: myRes
+      register: myRes
       
     - name: display result 
       debug: 
