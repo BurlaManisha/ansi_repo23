@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: i want to store linux cmd in ansible
-      command: hostnamee -f
+      command: hostname -f
       register: myRes
       
     - name: display result 
@@ -14,10 +14,10 @@
       apt:
         name: git
         state: present
-      when: myres.stderr == ""
+      when: myRes.stderr == ""
 
     - name: install wget
       apt:
         name: wget
         state: present
-      when: myres.stderr != "" 
+      when: myRes.stderr != "" 
