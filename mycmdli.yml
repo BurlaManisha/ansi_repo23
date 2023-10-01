@@ -3,10 +3,10 @@
   become: yes
   tasks:
     - name: i want to store linux cmd in ansible
-      command: hostname -h
-      redister: myres
+      command: hostname -f
+      redister: myRes
       
     - name: display result 
       debug: 
-        msg: "{{myres}}""
+        msg: "{{myRes}}"
 
