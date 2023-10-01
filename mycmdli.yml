@@ -1,0 +1,12 @@
+---
+- hosts: mywebserver
+  become: yes
+  tasks:
+    - name: i want to store linux cmd in ansible
+      command: hostname -h
+      redister: myres
+      
+    - name: display result 
+      debug: 
+        msg: "{{myres}}""
+
